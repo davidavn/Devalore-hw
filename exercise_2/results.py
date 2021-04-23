@@ -43,5 +43,6 @@ print('Dictionary of pictures filename with parent folder:\n', d)
 
 # 8. Print a filtered list with the name of the folders that contains the letter 's'
 noPathFolders = [os.path.split(folderWithPath)[1] for folderWithPath in folders]
-Sfolders = [folder for folder in noPathFolders if re.search('.*s.*', folder)]
+regex = re.compile('.*s.*')
+Sfolders = list(filter(regex.match, noPathFolders))
 print(Sfolders)
