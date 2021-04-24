@@ -1,0 +1,8 @@
+1. What is the difference between os.environ and os.getenv ?
+
+os.getenv(key, default=None) is a call to os.environ.get(key, default=None) where environ is a dictionary. returns Default if key doesn't exist. 
+os.environ[key] raises an exception if the key doesn't exist.
+
+2. What is the difference between json.dumps and json.dump
+json.dumps converts a python dict to a json compatible string.
+json.dump write a dict content to a json file following json format.
